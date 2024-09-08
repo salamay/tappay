@@ -1,4 +1,4 @@
-package com.tappay.service.webservice.Otp.Model;
+package com.tappay.service.webservice.Profile.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

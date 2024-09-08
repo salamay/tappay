@@ -3,8 +3,6 @@ package com.tappay.service.webservice.Transaction.model;
 
 import jakarta.persistence.Id;
 import org.springframework.data.relational.core.mapping.Table;
-
-import java.sql.Date;
 import java.time.LocalDate;
 
 

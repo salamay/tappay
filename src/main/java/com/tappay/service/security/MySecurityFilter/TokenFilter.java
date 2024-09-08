@@ -52,7 +52,8 @@ public class TokenFilter extends OncePerRequestFilter {
                 UserModel userModel=new UserModel();
                 userModel.setEmail(email);
                 userModel.setUid(uid);
-                userModel.setDevice_token(userModel.getDevice_token());
+                userModel.setPassword("");
+                userModel.setDevice_token(userDetails.getDevice_token());
                 userModel.setAccount_status(userDetails.getAccount_status());
                 userModel.setEnabled(userDetails.isEnabled());
                 userModel.setRoles(userDetails.getAuthorities().stream().map(Object::toString).reduce((a,b)->a+","+b).get());

@@ -1,12 +1,9 @@
 package com.tappay.service.webservice.FlutterWave.controller;
 
-
-import com.tappay.service.jparepository.Profile.ProfileRepository;
 import com.tappay.service.jparepository.TxLog.TxLogRepository;
 import com.tappay.service.jparepository.User.UserRepository;
 import com.tappay.service.reactiverepository.Balance.ReactiveBalanceRepository;
 import com.tappay.service.reactiverepository.UserTransaction.UserTransactionRepository;
-import com.tappay.service.webservice.Balance.Model.UserBalance;
 import com.tappay.service.webservice.Balance.context.BalanceContext;
 import com.tappay.service.webservice.FlutterWave.Model.transaction.ChargeEvent;
 import com.tappay.service.webservice.FlutterWave.RaveManager;
@@ -21,7 +18,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
-import java.sql.Date;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
@@ -41,8 +37,6 @@ public class WaveController {
     private ReactiveBalanceRepository reactiveBalanceRepository;
     @Autowired
     private UserRepository userRepository;
-    @Autowired
-    private ProfileRepository profileRepository;
     @Autowired
     private TxLogRepository txLogRepository;
     @Autowired

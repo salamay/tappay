@@ -62,4 +62,8 @@ public class MyUserDetail implements UserDetails {
     public String getAccount_status(){
         return userModel.getAccount_status();
     }
+
+    public String getDevice_token(){
+        return userModel.getDevice_token();
+    }
 }
