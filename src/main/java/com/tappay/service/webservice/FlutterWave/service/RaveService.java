@@ -16,6 +16,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.function.Consumer;
 
+import static com.tappay.service.webservice.FlutterWave.IRave.AUTHORIZATION;
+
 public class RaveService {
     Logger logger= LoggerFactory.getLogger(RaveService.class);
 
@@ -36,7 +38,7 @@ public class RaveService {
             logger.info("Verifying transaction: "+"id:"+id);
             Retrofit retrofit=getClient();
             IRave iRave=retrofit.create(IRave.class);
-            Call<RaveTransaction> call=iRave.verifyTransaction(id);
+            Call<RaveTransaction> call=iRave.verifyTransaction(AUTHORIZATION,id);
             call.enqueue(new Callback<RaveTransaction>() {
                 @Override
                 public void onResponse(@NotNull Call<RaveTransaction> call, @NotNull Response<RaveTransaction> response) {
