@@ -7,7 +7,7 @@ import com.tappay.service.security.Exception.MyException;
 import com.tappay.service.security.Jwt.Jwtutils;
 import com.tappay.service.webservice.Auth.PlaceHolder.RegistrationModel;
 import com.tappay.service.webservice.Balance.Model.UserBalance;
-import com.tappay.service.webservice.Otp.Model.ProfileModel;
+import com.tappay.service.webservice.Profile.Model.ProfileModel;
 import com.tappay.service.webservice.Auth.PlaceHolder.SignInModel;
 import com.tappay.service.webservice.Notification.ENotification;
 import com.tappay.service.webservice.Otp.Service.OtpService;
