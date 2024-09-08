@@ -1,0 +1,206 @@
+2024-09-08T16:18:04.040+01:00  INFO 9893 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 9893 (/Users/mac/Documents/service/target/classes started by mac in /Users/mac/Documents/service)
+2024-09-08T16:18:04.042+01:00  INFO 9893 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-09-08T16:18:04.549+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-08T16:18:04.549+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-08T16:18:04.717+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 159 ms. Found 3 JPA repository interfaces.
+2024-09-08T16:18:04.718+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-08T16:18:04.718+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-09-08T16:18:04.724+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 R2DBC repository interfaces.
+2024-09-08T16:18:05.474+01:00  INFO 9893 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
+2024-09-08T16:18:05.486+01:00  INFO 9893 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-08T16:18:05.486+01:00  INFO 9893 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-08T16:18:05.544+01:00  INFO 9893 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-08T16:18:05.544+01:00  INFO 9893 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1453 ms
+2024-09-08T16:18:05.709+01:00  INFO 9893 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
+2024-09-08T16:18:05.715+01:00  INFO 9893 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-08T16:18:05.764+01:00  INFO 9893 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-08T16:18:05.828+01:00  INFO 9893 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-09-08T16:18:05.868+01:00  INFO 9893 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-08T16:18:06.157+01:00  INFO 9893 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-08T16:18:06.467+01:00  WARN 9893 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-08T16:18:07.226+01:00  INFO 9893 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-08T16:18:07.284+01:00  INFO 9893 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-08T16:18:07.480+01:00  INFO 9893 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2024-09-08T16:18:07.480+01:00  INFO 9893 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-08T16:18:08.150+01:00  INFO 9893 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b91e024, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@309ac89e, org.springframework.security.web.context.SecurityContextHolderFilter@55f29d39, org.springframework.security.web.header.HeaderWriterFilter@20183e2d, org.springframework.security.web.authentication.logout.LogoutFilter@2fad50f2, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@2cd388f5, com.tappay.service.security.MySecurityFilter.TokenFilter@4fae4c3b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c50d1b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@739500b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2db0dd19, org.springframework.security.web.session.SessionManagementFilter@43945480, org.springframework.security.web.access.ExceptionTranslationFilter@4303511e, org.springframework.security.web.access.intercept.AuthorizationFilter@6b3a1151]
+2024-09-08T16:18:08.151+01:00  INFO 9893 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-08T16:18:08.376+01:00  INFO 9893 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
+2024-09-08T16:18:08.385+01:00  INFO 9893 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 4.806 seconds (process running for 5.221)
+2024-09-08T16:19:26.997+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-08T16:19:26.998+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-08T16:19:26.999+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-08T16:19:27.136+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Webhook call
+2024-09-08T16:19:27.137+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Webhook received from FlutterWave: tappay
+2024-09-08T16:19:27.219+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] c.t.s.w.FlutterWave.service.RaveService  : Verifying transaction: id:6595852
+2024-09-08T16:19:27.348+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : --> GET https://api.flutterwave.com/v3/transactions/6595852/verify
+2024-09-08T16:19:27.348+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : Content-Type: application/json
+2024-09-08T16:19:27.348+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : --> END GET
+2024-09-08T16:19:27.442+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Saving transaction: Rave-Pages251221277777
+2024-09-08T16:19:29.023+01:00  INFO 9893 --- [service] [reactor-tcp-nio-2] c.t.s.w.F.controller.WaveController      : Transaction saved: Rave-Pages251221277777
+2024-09-08T16:19:30.673+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : <-- 401 https://api.flutterwave.com/v3/transactions/6595852/verify (3324ms)
+2024-09-08T16:19:30.673+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : date: Sun, 08 Sep 2024 15:19:30 GMT
+2024-09-08T16:19:30.673+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : content-type: application/json; charset=utf-8
+2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : content-length: 65
+2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : server: nginx/1.26.0
+2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-origin: *
+2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, v3-xapp-id, flw-auth-token, mra-auth-token, alt_mode_auth, mid, altmodeauth, cc-admin-token, x-flw-lang
+2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-methods: PUT, POST, GET, DELETE, OPTIONS
+2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : etag: W/"41-ylQXP/8DQmtcEQx8A3M0iQ"
+2024-09-08T16:19:30.675+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : 
+2024-09-08T16:19:30.675+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : {"status":"error","message":"Authorization required","data":null}
+2024-09-08T16:19:30.675+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : <-- END HTTP (65-byte body)
+2024-09-08T16:19:30.676+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : 
+2024-09-08T16:19:30.676+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : 401
+2024-09-08T16:19:30.676+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : Transaction verification failed: id:6595852
+2024-09-08T16:22:49.532+01:00  INFO 9893 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-08T16:23:22.043+01:00  INFO 10007 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 10007 (/Users/mac/Documents/service/target/classes started by mac in /Users/mac/Documents/service)
+2024-09-08T16:23:22.045+01:00  INFO 10007 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-09-08T16:23:22.580+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-08T16:23:22.581+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-08T16:23:22.726+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 3 JPA repository interfaces.
+2024-09-08T16:23:22.727+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-08T16:23:22.728+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-09-08T16:23:22.734+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 R2DBC repository interfaces.
+2024-09-08T16:23:23.449+01:00  INFO 10007 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
+2024-09-08T16:23:23.463+01:00  INFO 10007 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-08T16:23:23.464+01:00  INFO 10007 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-08T16:23:23.536+01:00  INFO 10007 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-08T16:23:23.536+01:00  INFO 10007 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1431 ms
+2024-09-08T16:23:23.701+01:00  INFO 10007 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
+2024-09-08T16:23:23.705+01:00  INFO 10007 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-08T16:23:23.751+01:00  INFO 10007 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-08T16:23:23.865+01:00  INFO 10007 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-09-08T16:23:23.902+01:00  INFO 10007 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-08T16:23:24.197+01:00  INFO 10007 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-08T16:23:24.488+01:00  WARN 10007 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-08T16:23:25.184+01:00  INFO 10007 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-08T16:23:25.238+01:00  INFO 10007 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-08T16:23:25.447+01:00  INFO 10007 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2024-09-08T16:23:25.447+01:00  INFO 10007 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-08T16:23:26.197+01:00  INFO 10007 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a9004e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17af9f67, org.springframework.security.web.context.SecurityContextHolderFilter@454f6cc5, org.springframework.security.web.header.HeaderWriterFilter@7b6e196e, org.springframework.security.web.authentication.logout.LogoutFilter@5a02fca5, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@2c829dbc, com.tappay.service.security.MySecurityFilter.TokenFilter@4d1f168, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@739500b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60773809, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b6d8671, org.springframework.security.web.session.SessionManagementFilter@5c940e28, org.springframework.security.web.access.ExceptionTranslationFilter@5f4f198c, org.springframework.security.web.access.intercept.AuthorizationFilter@57e35236]
+2024-09-08T16:23:26.198+01:00  INFO 10007 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-08T16:23:26.494+01:00  INFO 10007 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
+2024-09-08T16:23:26.504+01:00  INFO 10007 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 4.909 seconds (process running for 5.293)
+2024-09-08T16:23:33.043+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-08T16:23:33.043+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-08T16:23:33.044+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-08T16:23:33.138+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Webhook call
+2024-09-08T16:23:33.138+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Webhook received from FlutterWave: tappay
+2024-09-08T16:23:33.188+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] c.t.s.w.FlutterWave.service.RaveService  : Verifying transaction: id:6595852
+2024-09-08T16:23:33.274+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : --> GET https://api.flutterwave.com/v3/transactions/6595852/verify
+2024-09-08T16:23:33.275+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : Content-Type: application/json
+2024-09-08T16:23:33.275+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : --> END GET
+2024-09-08T16:23:33.350+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Saving transaction: Rave-Pages251221277777
+2024-09-08T16:23:34.486+01:00  INFO 10007 --- [service] [reactor-tcp-nio-2] i.a.r.mysql.client.ReactorNettyClient    : Response: OkMessage{isEndOfRows=false, affectedRows=0, lastInsertId=0, serverStatuses=2, warnings=1, information='', systemVariables={}}, reports 1 warning(s)
+2024-09-08T16:23:34.487+01:00 ERROR 10007 --- [service] [reactor-tcp-nio-2] reactor.core.publisher.Operators         : Operator called default onErrorDropped
+
+reactor.core.Exceptions$ErrorCallbackNotImplemented: org.springframework.dao.DuplicateKeyException: executeMany; SQL [INSERT INTO transactions (id, uid, type, sender, receiver, amount, date, payment_method, transfer_fee, account_number, transaction_status, tx_ref, user_uid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; Duplicate entry '6595852-784517052' for key 'transactions.PRIMARY'
+Caused by: org.springframework.dao.DuplicateKeyException: executeMany; SQL [INSERT INTO transactions (id, uid, type, sender, receiver, amount, date, payment_method, transfer_fee, account_number, transaction_status, tx_ref, user_uid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; Duplicate entry '6595852-784517052' for key 'transactions.PRIMARY'
+	at org.springframework.r2dbc.connection.ConnectionFactoryUtils.convertR2dbcException(ConnectionFactoryUtils.java:245) ~[spring-r2dbc-6.1.12.jar:6.1.12]
+	at org.springframework.r2dbc.core.DefaultDatabaseClient.lambda$inConnectionMany$8(DefaultDatabaseClient.java:156) ~[spring-r2dbc-6.1.12.jar:6.1.12]
+	at reactor.core.publisher.Flux.lambda$onErrorMap$29(Flux.java:7310) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.Flux.lambda$onErrorResume$30(Flux.java:7363) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:94) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredError(FluxUsingWhen.java:403) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxUsingWhen$RollbackInner.onComplete(FluxUsingWhen.java:480) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:210) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:210) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.pool.SimpleDequePool.maybeRecycleAndDrain(SimpleDequePool.java:540) ~[reactor-pool-1.0.8.jar:1.0.8]
+	at reactor.pool.SimpleDequePool$QueuePoolRecyclerInner.onComplete(SimpleDequePool.java:781) ~[reactor-pool-1.0.8.jar:1.0.8]
+	at reactor.core.publisher.Operators.complete(Operators.java:137) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.pool.SimpleDequePool$QueuePoolRecyclerMono.subscribe(SimpleDequePool.java:893) ~[reactor-pool-1.0.8.jar:1.0.8]
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:241) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126) ~[reactor-core-3.6.9.jar:3.6.9]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onComplete(DiscardOnCancelSubscriber.java:84) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onComplete(FluxPeekFuseable.java:940) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:359) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.9.jar:3.6.9]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:394) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
+	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:119) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.22.jar:1.1.22]
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.22.jar:1.1.22]
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425) ~[reactor-netty-core-1.1.22.jar:1.1.22]
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) ~[reactor-netty-core-1.1.22.jar:1.1.22]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1473) ~[netty-handler-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1336) ~[netty-handler-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1385) ~[netty-handler-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1407) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:918) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+Caused by: io.r2dbc.spi.R2dbcDataIntegrityViolationException: Duplicate entry '6595852-784517052' for key 'transactions.PRIMARY'
+	at io.asyncer.r2dbc.mysql.message.server.ErrorMessage.toException(ErrorMessage.java:126) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
+	at io.asyncer.r2dbc.mysql.message.server.ErrorMessage.toException(ErrorMessage.java:73) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
+	at io.asyncer.r2dbc.mysql.MySqlSegmentResult$MySqlMessage.exception(MySqlSegmentResult.java:181) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
+	at io.asyncer.r2dbc.mysql.MySqlSegmentResult.lambda$map$1(MySqlSegmentResult.java:95) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.9.jar:3.6.9]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:251) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.9.jar:3.6.9]
+	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.9.jar:3.6.9]
+	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.9.jar:3.6.9]
+	... 42 common frames omitted
+
+2024-09-08T16:23:42.595+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : <-- 401 https://api.flutterwave.com/v3/transactions/6595852/verify (9320ms)
+2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : date: Sun, 08 Sep 2024 15:23:42 GMT
+2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : content-type: application/json; charset=utf-8
+2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : content-length: 65
+2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : server: nginx/1.26.0
+2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-origin: *
+2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, v3-xapp-id, flw-auth-token, mra-auth-token, alt_mode_auth, mid, altmodeauth, cc-admin-token, x-flw-lang
+2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-methods: PUT, POST, GET, DELETE, OPTIONS
+2024-09-08T16:23:42.597+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : etag: W/"41-ylQXP/8DQmtcEQx8A3M0iQ"
+2024-09-08T16:23:42.598+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : 
+2024-09-08T16:23:42.599+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : {"status":"error","message":"Authorization required","data":null}
+2024-09-08T16:23:42.599+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : <-- END HTTP (65-byte body)
+2024-09-08T16:23:42.600+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : 
+2024-09-08T16:23:42.600+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : 401
+2024-09-08T16:23:42.600+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : Transaction verification failed: id:6595852
+2024-09-08T16:23:53.101+01:00  INFO 10007 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
