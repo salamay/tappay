@@ -1,525 +1,280 @@
-2024-09-08T16:18:04.040+01:00  INFO 9893 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 9893 (/Users/mac/Documents/service/target/classes started by mac in /Users/mac/Documents/service)
-2024-09-08T16:18:04.042+01:00  INFO 9893 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T16:18:04.549+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T16:18:04.549+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T16:18:04.717+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 159 ms. Found 3 JPA repository interfaces.
-2024-09-08T16:18:04.718+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T16:18:04.718+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T16:18:04.724+01:00  INFO 9893 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 R2DBC repository interfaces.
-2024-09-08T16:18:05.474+01:00  INFO 9893 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T16:18:05.486+01:00  INFO 9893 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T16:18:05.486+01:00  INFO 9893 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T16:18:05.544+01:00  INFO 9893 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T16:18:05.544+01:00  INFO 9893 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1453 ms
-2024-09-08T16:18:05.709+01:00  INFO 9893 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T16:18:05.715+01:00  INFO 9893 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T16:18:05.764+01:00  INFO 9893 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T16:18:05.828+01:00  INFO 9893 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T16:18:05.868+01:00  INFO 9893 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T16:18:06.157+01:00  INFO 9893 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T16:18:06.467+01:00  WARN 9893 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T16:18:07.226+01:00  INFO 9893 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T16:18:07.284+01:00  INFO 9893 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T16:18:07.480+01:00  INFO 9893 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T16:18:07.480+01:00  INFO 9893 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T16:18:08.150+01:00  INFO 9893 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b91e024, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@309ac89e, org.springframework.security.web.context.SecurityContextHolderFilter@55f29d39, org.springframework.security.web.header.HeaderWriterFilter@20183e2d, org.springframework.security.web.authentication.logout.LogoutFilter@2fad50f2, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@2cd388f5, com.tappay.service.security.MySecurityFilter.TokenFilter@4fae4c3b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@c50d1b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@739500b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2db0dd19, org.springframework.security.web.session.SessionManagementFilter@43945480, org.springframework.security.web.access.ExceptionTranslationFilter@4303511e, org.springframework.security.web.access.intercept.AuthorizationFilter@6b3a1151]
-2024-09-08T16:18:08.151+01:00  INFO 9893 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T16:18:08.376+01:00  INFO 9893 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T16:18:08.385+01:00  INFO 9893 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 4.806 seconds (process running for 5.221)
-2024-09-08T16:19:26.997+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-08T16:19:26.998+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-08T16:19:26.999+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-09-08T16:19:27.136+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Webhook call
-2024-09-08T16:19:27.137+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Webhook received from FlutterWave: tappay
-2024-09-08T16:19:27.219+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] c.t.s.w.FlutterWave.service.RaveService  : Verifying transaction: id:6595852
-2024-09-08T16:19:27.348+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : --> GET https://api.flutterwave.com/v3/transactions/6595852/verify
-2024-09-08T16:19:27.348+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : Content-Type: application/json
-2024-09-08T16:19:27.348+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : --> END GET
-2024-09-08T16:19:27.442+01:00  INFO 9893 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Saving transaction: Rave-Pages251221277777
-2024-09-08T16:19:29.023+01:00  INFO 9893 --- [service] [reactor-tcp-nio-2] c.t.s.w.F.controller.WaveController      : Transaction saved: Rave-Pages251221277777
-2024-09-08T16:19:30.673+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : <-- 401 https://api.flutterwave.com/v3/transactions/6595852/verify (3324ms)
-2024-09-08T16:19:30.673+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : date: Sun, 08 Sep 2024 15:19:30 GMT
-2024-09-08T16:19:30.673+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : content-type: application/json; charset=utf-8
-2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : content-length: 65
-2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : server: nginx/1.26.0
-2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-origin: *
-2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, v3-xapp-id, flw-auth-token, mra-auth-token, alt_mode_auth, mid, altmodeauth, cc-admin-token, x-flw-lang
-2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-methods: PUT, POST, GET, DELETE, OPTIONS
-2024-09-08T16:19:30.674+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : etag: W/"41-ylQXP/8DQmtcEQx8A3M0iQ"
-2024-09-08T16:19:30.675+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : 
-2024-09-08T16:19:30.675+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : {"status":"error","message":"Authorization required","data":null}
-2024-09-08T16:19:30.675+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : <-- END HTTP (65-byte body)
-2024-09-08T16:19:30.676+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : 
-2024-09-08T16:19:30.676+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : 401
-2024-09-08T16:19:30.676+01:00  INFO 9893 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : Transaction verification failed: id:6595852
-2024-09-08T16:22:49.532+01:00  INFO 9893 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T16:23:22.043+01:00  INFO 10007 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 10007 (/Users/mac/Documents/service/target/classes started by mac in /Users/mac/Documents/service)
-2024-09-08T16:23:22.045+01:00  INFO 10007 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T16:23:22.580+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T16:23:22.581+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T16:23:22.726+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136 ms. Found 3 JPA repository interfaces.
-2024-09-08T16:23:22.727+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T16:23:22.728+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T16:23:22.734+01:00  INFO 10007 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 R2DBC repository interfaces.
-2024-09-08T16:23:23.449+01:00  INFO 10007 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T16:23:23.463+01:00  INFO 10007 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T16:23:23.464+01:00  INFO 10007 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T16:23:23.536+01:00  INFO 10007 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T16:23:23.536+01:00  INFO 10007 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1431 ms
-2024-09-08T16:23:23.701+01:00  INFO 10007 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T16:23:23.705+01:00  INFO 10007 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T16:23:23.751+01:00  INFO 10007 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T16:23:23.865+01:00  INFO 10007 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T16:23:23.902+01:00  INFO 10007 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T16:23:24.197+01:00  INFO 10007 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T16:23:24.488+01:00  WARN 10007 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T16:23:25.184+01:00  INFO 10007 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T16:23:25.238+01:00  INFO 10007 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T16:23:25.447+01:00  INFO 10007 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T16:23:25.447+01:00  INFO 10007 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T16:23:26.197+01:00  INFO 10007 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a9004e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17af9f67, org.springframework.security.web.context.SecurityContextHolderFilter@454f6cc5, org.springframework.security.web.header.HeaderWriterFilter@7b6e196e, org.springframework.security.web.authentication.logout.LogoutFilter@5a02fca5, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@2c829dbc, com.tappay.service.security.MySecurityFilter.TokenFilter@4d1f168, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@739500b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60773809, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b6d8671, org.springframework.security.web.session.SessionManagementFilter@5c940e28, org.springframework.security.web.access.ExceptionTranslationFilter@5f4f198c, org.springframework.security.web.access.intercept.AuthorizationFilter@57e35236]
-2024-09-08T16:23:26.198+01:00  INFO 10007 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T16:23:26.494+01:00  INFO 10007 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T16:23:26.504+01:00  INFO 10007 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 4.909 seconds (process running for 5.293)
-2024-09-08T16:23:33.043+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-08T16:23:33.043+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-08T16:23:33.044+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-09-08T16:23:33.138+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Webhook call
-2024-09-08T16:23:33.138+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Webhook received from FlutterWave: tappay
-2024-09-08T16:23:33.188+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] c.t.s.w.FlutterWave.service.RaveService  : Verifying transaction: id:6595852
-2024-09-08T16:23:33.274+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : --> GET https://api.flutterwave.com/v3/transactions/6595852/verify
-2024-09-08T16:23:33.275+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : Content-Type: application/json
-2024-09-08T16:23:33.275+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : --> END GET
-2024-09-08T16:23:33.350+01:00  INFO 10007 --- [service] [http-nio-323-exec-2] c.t.s.w.F.controller.WaveController      : Saving transaction: Rave-Pages251221277777
-2024-09-08T16:23:34.486+01:00  INFO 10007 --- [service] [reactor-tcp-nio-2] i.a.r.mysql.client.ReactorNettyClient    : Response: OkMessage{isEndOfRows=false, affectedRows=0, lastInsertId=0, serverStatuses=2, warnings=1, information='', systemVariables={}}, reports 1 warning(s)
-2024-09-08T16:23:34.487+01:00 ERROR 10007 --- [service] [reactor-tcp-nio-2] reactor.core.publisher.Operators         : Operator called default onErrorDropped
+2024-09-10T01:45:15.328+01:00  INFO 3812 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 3812 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
+2024-09-10T01:45:15.336+01:00  INFO 3812 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-09-10T01:45:16.072+01:00  INFO 3812 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:45:16.072+01:00  INFO 3812 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-10T01:45:16.323+01:00  INFO 3812 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 237 ms. Found 4 JPA repository interfaces.
+2024-09-10T01:45:16.325+01:00  INFO 3812 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:45:16.325+01:00  INFO 3812 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-09-10T01:45:16.337+01:00  INFO 3812 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 3 R2DBC repository interfaces.
+2024-09-10T01:45:17.471+01:00  INFO 3812 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
+2024-09-10T01:45:17.489+01:00  INFO 3812 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-10T01:45:17.490+01:00  INFO 3812 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-10T01:45:17.571+01:00  INFO 3812 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-10T01:45:17.573+01:00  INFO 3812 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2169 ms
+2024-09-10T01:45:17.813+01:00  INFO 3812 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
+2024-09-10T01:45:17.820+01:00  INFO 3812 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:45:17.887+01:00  INFO 3812 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-10T01:45:17.977+01:00  INFO 3812 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-09-10T01:45:18.038+01:00  INFO 3812 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-10T01:45:18.487+01:00  INFO 3812 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-10T01:45:19.136+01:00  WARN 3812 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-10T01:45:20.252+01:00  INFO 3812 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-10T01:45:20.393+01:00  INFO 3812 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:45:20.707+01:00  INFO 3812 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2024-09-10T01:45:20.707+01:00  INFO 3812 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-10T01:45:21.679+01:00  INFO 3812 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@20711b02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52d9a150, org.springframework.security.web.context.SecurityContextHolderFilter@4cce889e, org.springframework.security.web.header.HeaderWriterFilter@68ac6e6e, org.springframework.security.web.authentication.logout.LogoutFilter@6153aca1, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@7bdf61ad, com.tappay.service.security.MySecurityFilter.TokenFilter@3cf1b5fb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77a35b2f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65630116, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@476a38d9, org.springframework.security.web.session.SessionManagementFilter@c8e99, org.springframework.security.web.access.ExceptionTranslationFilter@3299ee2c, org.springframework.security.web.access.intercept.AuthorizationFilter@fffb4a8]
+2024-09-10T01:45:21.680+01:00  INFO 3812 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:45:22.044+01:00  INFO 3812 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
+2024-09-10T01:45:22.054+01:00  INFO 3812 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 7.404 seconds (process running for 8.149)
+2024-09-10T01:46:20.168+01:00  INFO 3812 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:46:32.369+01:00  INFO 3879 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 3879 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
+2024-09-10T01:46:32.373+01:00  INFO 3879 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-09-10T01:46:33.235+01:00  INFO 3879 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:46:33.235+01:00  INFO 3879 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-10T01:46:33.474+01:00  INFO 3879 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 228 ms. Found 4 JPA repository interfaces.
+2024-09-10T01:46:33.476+01:00  INFO 3879 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:46:33.476+01:00  INFO 3879 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-09-10T01:46:33.491+01:00  INFO 3879 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 R2DBC repository interfaces.
+2024-09-10T01:46:34.567+01:00  INFO 3879 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
+2024-09-10T01:46:34.587+01:00  INFO 3879 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-10T01:46:34.588+01:00  INFO 3879 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-10T01:46:34.674+01:00  INFO 3879 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-10T01:46:34.675+01:00  INFO 3879 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2198 ms
+2024-09-10T01:46:34.962+01:00  INFO 3879 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
+2024-09-10T01:46:34.968+01:00  INFO 3879 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:46:35.050+01:00  INFO 3879 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-10T01:46:35.154+01:00  INFO 3879 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-09-10T01:46:35.217+01:00  INFO 3879 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-10T01:46:35.675+01:00  INFO 3879 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-10T01:46:36.164+01:00  WARN 3879 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-10T01:46:37.268+01:00  INFO 3879 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-10T01:46:37.359+01:00  INFO 3879 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:46:37.707+01:00  INFO 3879 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2024-09-10T01:46:37.708+01:00  INFO 3879 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-10T01:46:38.813+01:00  INFO 3879 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c25687b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c21b22e, org.springframework.security.web.context.SecurityContextHolderFilter@e0faed6, org.springframework.security.web.header.HeaderWriterFilter@44a972b4, org.springframework.security.web.authentication.logout.LogoutFilter@33c5e52f, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@28e0e464, com.tappay.service.security.MySecurityFilter.TokenFilter@2b0d818d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5817b0d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4624e3d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@184e5c44, org.springframework.security.web.session.SessionManagementFilter@6eb6750f, org.springframework.security.web.access.ExceptionTranslationFilter@645b67d6, org.springframework.security.web.access.intercept.AuthorizationFilter@73ac7716]
+2024-09-10T01:46:38.814+01:00  INFO 3879 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:46:39.239+01:00  INFO 3879 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
+2024-09-10T01:46:39.251+01:00  INFO 3879 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 7.6 seconds (process running for 8.402)
+2024-09-10T01:47:25.320+01:00  INFO 3879 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-10T01:47:25.321+01:00  INFO 3879 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-10T01:47:25.323+01:00  INFO 3879 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-10T01:47:26.120+01:00  INFO 3879 --- [service] [http-nio-323-exec-2] c.t.s.w.KYC.Controller.KycController     : Uploading document
+2024-09-10T01:47:26.125+01:00  INFO 3879 --- [service] [http-nio-323-exec-2] c.t.s.w.KYC.Services.KycService          : File extension: Screenshot 2024-09-09 at 1.00.14 AM.png
+2024-09-10T01:48:02.023+01:00  INFO 3879 --- [service] [http-nio-323-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
 
-reactor.core.Exceptions$ErrorCallbackNotImplemented: org.springframework.dao.DuplicateKeyException: executeMany; SQL [INSERT INTO transactions (id, uid, type, sender, receiver, amount, date, payment_method, transfer_fee, account_number, transaction_status, tx_ref, user_uid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; Duplicate entry '6595852-784517052' for key 'transactions.PRIMARY'
-Caused by: org.springframework.dao.DuplicateKeyException: executeMany; SQL [INSERT INTO transactions (id, uid, type, sender, receiver, amount, date, payment_method, transfer_fee, account_number, transaction_status, tx_ref, user_uid) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; Duplicate entry '6595852-784517052' for key 'transactions.PRIMARY'
-	at org.springframework.r2dbc.connection.ConnectionFactoryUtils.convertR2dbcException(ConnectionFactoryUtils.java:245) ~[spring-r2dbc-6.1.12.jar:6.1.12]
-	at org.springframework.r2dbc.core.DefaultDatabaseClient.lambda$inConnectionMany$8(DefaultDatabaseClient.java:156) ~[spring-r2dbc-6.1.12.jar:6.1.12]
-	at reactor.core.publisher.Flux.lambda$onErrorMap$29(Flux.java:7310) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.Flux.lambda$onErrorResume$30(Flux.java:7363) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:94) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredError(FluxUsingWhen.java:403) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxUsingWhen$RollbackInner.onComplete(FluxUsingWhen.java:480) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:210) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:210) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.pool.SimpleDequePool.maybeRecycleAndDrain(SimpleDequePool.java:540) ~[reactor-pool-1.0.8.jar:1.0.8]
-	at reactor.pool.SimpleDequePool$QueuePoolRecyclerInner.onComplete(SimpleDequePool.java:781) ~[reactor-pool-1.0.8.jar:1.0.8]
-	at reactor.core.publisher.Operators.complete(Operators.java:137) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.Mono.subscribe(Mono.java:4576) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.pool.SimpleDequePool$QueuePoolRecyclerMono.subscribe(SimpleDequePool.java:893) ~[reactor-pool-1.0.8.jar:1.0.8]
-	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:241) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onComplete(FluxPeekFuseable.java:277) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126) ~[reactor-core-3.6.9.jar:3.6.9]
-	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onComplete(DiscardOnCancelSubscriber.java:84) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
-	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onComplete(FluxPeekFuseable.java:940) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:359) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:476) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.SinkManyEmitterProcessor.tryEmitNext(SinkManyEmitterProcessor.java:273) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.SinkManySerialized.tryEmitNext(SinkManySerialized.java:100) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.InternalManySink.emitNext(InternalManySink.java:27) ~[reactor-core-3.6.9.jar:3.6.9]
-	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient$ResponseSink.next(ReactorNettyClient.java:394) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
-	at io.asyncer.r2dbc.mysql.client.ReactorNettyClient.lambda$new$0(ReactorNettyClient.java:119) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
-	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294) ~[reactor-netty-core-1.1.22.jar:1.1.22]
-	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403) ~[reactor-netty-core-1.1.22.jar:1.1.22]
-	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425) ~[reactor-netty-core-1.1.22.jar:1.1.22]
-	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) ~[reactor-netty-core-1.1.22.jar:1.1.22]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1473) ~[netty-handler-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1336) ~[netty-handler-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1385) ~[netty-handler-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:530) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:469) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1407) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:918) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar:4.1.112.Final]
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar:4.1.112.Final]
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030xfe0xa80xed0xf20xa70x97%E0xe2w0xee0x950xd00xcfn0x9cOR0x850xd60xbeT0xf70xe0KK0xad0xe70xc50x03p0x98 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:257) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
 	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
-Caused by: io.r2dbc.spi.R2dbcDataIntegrityViolationException: Duplicate entry '6595852-784517052' for key 'transactions.PRIMARY'
-	at io.asyncer.r2dbc.mysql.message.server.ErrorMessage.toException(ErrorMessage.java:126) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
-	at io.asyncer.r2dbc.mysql.message.server.ErrorMessage.toException(ErrorMessage.java:73) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
-	at io.asyncer.r2dbc.mysql.MySqlSegmentResult$MySqlMessage.exception(MySqlSegmentResult.java:181) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
-	at io.asyncer.r2dbc.mysql.MySqlSegmentResult.lambda$map$1(MySqlSegmentResult.java:95) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
-	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableConditionalSubscriber.onNext(FluxHandleFuseable.java:505) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.9.jar:3.6.9]
-	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
-	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:268) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:251) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.6.9.jar:3.6.9]
-	at io.asyncer.r2dbc.mysql.internal.util.DiscardOnCancelSubscriber.onNext(DiscardOnCancelSubscriber.java:66) ~[r2dbc-mysql-1.3.0.jar:1.3.0]
-	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854) ~[reactor-core-3.6.9.jar:3.6.9]
-	at reactor.core.publisher.FluxHandle$HandleConditionalSubscriber.onNext(FluxHandle.java:343) ~[reactor-core-3.6.9.jar:3.6.9]
-	... 42 common frames omitted
 
-2024-09-08T16:23:42.595+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : <-- 401 https://api.flutterwave.com/v3/transactions/6595852/verify (9320ms)
-2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : date: Sun, 08 Sep 2024 15:23:42 GMT
-2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : content-type: application/json; charset=utf-8
-2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : content-length: 65
-2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : server: nginx/1.26.0
-2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-origin: *
-2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-headers: Origin, X-Requested-With, Content-Type, Accept, Authorization, v3-xapp-id, flw-auth-token, mra-auth-token, alt_mode_auth, mid, altmodeauth, cc-admin-token, x-flw-lang
-2024-09-08T16:23:42.596+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : access-control-allow-methods: PUT, POST, GET, DELETE, OPTIONS
-2024-09-08T16:23:42.597+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : etag: W/"41-ylQXP/8DQmtcEQx8A3M0iQ"
-2024-09-08T16:23:42.598+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : 
-2024-09-08T16:23:42.599+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : {"status":"error","message":"Authorization required","data":null}
-2024-09-08T16:23:42.599+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] okhttp3.OkHttpClient                     : <-- END HTTP (65-byte body)
-2024-09-08T16:23:42.600+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : 
-2024-09-08T16:23:42.600+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : 401
-2024-09-08T16:23:42.600+01:00  INFO 10007 --- [service] [OkHttp https://api.flutterwave.com/...] c.t.s.w.FlutterWave.service.RaveService  : Transaction verification failed: id:6595852
-2024-09-08T16:23:53.101+01:00  INFO 10007 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T16:33:24.534+01:00  INFO 10335 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 10335 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
-2024-09-08T16:33:24.536+01:00  INFO 10335 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T16:33:25.132+01:00  INFO 10335 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T16:33:25.132+01:00  INFO 10335 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T16:33:25.262+01:00  INFO 10335 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 3 JPA repository interfaces.
-2024-09-08T16:33:25.264+01:00  INFO 10335 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T16:33:25.265+01:00  INFO 10335 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T16:33:25.272+01:00  INFO 10335 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 R2DBC repository interfaces.
-2024-09-08T16:33:26.038+01:00  INFO 10335 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T16:33:26.050+01:00  INFO 10335 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T16:33:26.050+01:00  INFO 10335 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T16:33:26.106+01:00  INFO 10335 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T16:33:26.106+01:00  INFO 10335 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1511 ms
-2024-09-08T16:33:26.234+01:00  INFO 10335 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T16:33:26.237+01:00  INFO 10335 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T16:33:26.292+01:00  INFO 10335 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T16:33:26.350+01:00  INFO 10335 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T16:33:26.392+01:00  INFO 10335 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T16:33:26.664+01:00  INFO 10335 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T16:33:27.000+01:00  WARN 10335 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T16:33:27.613+01:00  INFO 10335 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T16:33:27.677+01:00  INFO 10335 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T16:33:27.869+01:00  INFO 10335 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T16:33:27.869+01:00  INFO 10335 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T16:33:28.494+01:00  INFO 10335 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@135f760a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36e9fd4f, org.springframework.security.web.context.SecurityContextHolderFilter@137a70f1, org.springframework.security.web.header.HeaderWriterFilter@6f7e5e11, org.springframework.security.web.authentication.logout.LogoutFilter@38320819, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@164642a4, com.tappay.service.security.MySecurityFilter.TokenFilter@5134a7d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54351197, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55f29d39, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@730611a0, org.springframework.security.web.session.SessionManagementFilter@7966a964, org.springframework.security.web.access.ExceptionTranslationFilter@270a3cef, org.springframework.security.web.access.intercept.AuthorizationFilter@1046aaa4]
-2024-09-08T16:33:28.494+01:00  INFO 10335 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T16:33:28.806+01:00  INFO 10335 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T16:33:28.819+01:00  INFO 10335 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 4.749 seconds (process running for 5.257)
-2024-09-08T16:33:47.816+01:00  INFO 10335 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T20:58:00.039+01:00  INFO 11080 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 11080 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
-2024-09-08T20:58:00.044+01:00  INFO 11080 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T20:58:00.860+01:00  INFO 11080 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T20:58:00.860+01:00  INFO 11080 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T20:58:01.095+01:00  INFO 11080 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 221 ms. Found 2 JPA repository interfaces.
-2024-09-08T20:58:01.096+01:00  INFO 11080 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T20:58:01.097+01:00  INFO 11080 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T20:58:01.111+01:00  INFO 11080 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 R2DBC repository interfaces.
-2024-09-08T20:58:02.338+01:00  INFO 11080 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T20:58:02.357+01:00  INFO 11080 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T20:58:02.357+01:00  INFO 11080 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T20:58:02.460+01:00  INFO 11080 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T20:58:02.461+01:00  INFO 11080 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2336 ms
-2024-09-08T20:58:02.770+01:00  INFO 11080 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T20:58:02.777+01:00  INFO 11080 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T20:58:02.857+01:00  INFO 11080 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T20:58:02.966+01:00  INFO 11080 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T20:58:03.037+01:00  INFO 11080 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T20:58:03.507+01:00  INFO 11080 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T20:58:04.072+01:00  WARN 11080 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T20:58:05.178+01:00  INFO 11080 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T20:58:05.265+01:00  INFO 11080 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T20:58:05.564+01:00  INFO 11080 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T20:58:05.565+01:00  INFO 11080 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T20:58:06.645+01:00  INFO 11080 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6cf34b88, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e7fc012, org.springframework.security.web.context.SecurityContextHolderFilter@3e3c6323, org.springframework.security.web.header.HeaderWriterFilter@33602729, org.springframework.security.web.authentication.logout.LogoutFilter@653c0c9c, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@76e90da5, com.tappay.service.security.MySecurityFilter.TokenFilter@65871cfd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77d0a492, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@36299b83, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63e0c744, org.springframework.security.web.session.SessionManagementFilter@15b882a0, org.springframework.security.web.access.ExceptionTranslationFilter@2aacf54b, org.springframework.security.web.access.intercept.AuthorizationFilter@6c7bc8ac]
-2024-09-08T20:58:06.647+01:00  INFO 11080 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T20:58:07.057+01:00  INFO 11080 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T20:58:07.070+01:00  INFO 11080 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 7.805 seconds (process running for 8.492)
-2024-09-08T20:58:34.990+01:00  INFO 11080 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:06:01.894+01:00  INFO 11227 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 11227 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
-2024-09-08T21:06:01.897+01:00  INFO 11227 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T21:06:02.709+01:00  INFO 11227 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:06:02.710+01:00  INFO 11227 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T21:06:02.941+01:00  INFO 11227 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 215 ms. Found 3 JPA repository interfaces.
-2024-09-08T21:06:02.942+01:00  INFO 11227 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:06:02.943+01:00  INFO 11227 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T21:06:02.955+01:00  INFO 11227 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 3 R2DBC repository interfaces.
-2024-09-08T21:06:03.960+01:00  INFO 11227 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T21:06:03.976+01:00  INFO 11227 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T21:06:03.976+01:00  INFO 11227 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T21:06:04.059+01:00  INFO 11227 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T21:06:04.060+01:00  INFO 11227 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2081 ms
-2024-09-08T21:06:04.289+01:00  INFO 11227 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T21:06:04.294+01:00  INFO 11227 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:06:04.355+01:00  INFO 11227 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T21:06:04.408+01:00  INFO 11227 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T21:06:04.455+01:00  INFO 11227 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T21:06:04.768+01:00  INFO 11227 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T21:06:05.175+01:00  WARN 11227 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T21:06:06.023+01:00  INFO 11227 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T21:06:06.093+01:00  INFO 11227 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:06:06.343+01:00  INFO 11227 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T21:06:06.343+01:00  INFO 11227 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T21:06:07.210+01:00  INFO 11227 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@29ceefb3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f14d079, org.springframework.security.web.context.SecurityContextHolderFilter@24c7b944, org.springframework.security.web.header.HeaderWriterFilter@d96f413, org.springframework.security.web.authentication.logout.LogoutFilter@36b2b6e6, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@62765aec, com.tappay.service.security.MySecurityFilter.TokenFilter@6e757f39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@540ac21e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38320819, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d0456ad, org.springframework.security.web.session.SessionManagementFilter@6101fd7d, org.springframework.security.web.access.ExceptionTranslationFilter@43945480, org.springframework.security.web.access.intercept.AuthorizationFilter@490dfe25]
-2024-09-08T21:06:07.212+01:00  INFO 11227 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:06:07.580+01:00  INFO 11227 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T21:06:07.590+01:00  INFO 11227 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 6.423 seconds (process running for 7.055)
-2024-09-08T21:07:04.552+01:00  INFO 11227 --- [service] [http-nio-323-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-08T21:07:04.552+01:00  INFO 11227 --- [service] [http-nio-323-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-08T21:07:04.554+01:00  INFO 11227 --- [service] [http-nio-323-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-09-08T21:07:32.437+01:00  INFO 11227 --- [service] [http-nio-323-exec-3] c.t.s.w.B.controller.BalanceController   : Getting balance for user: ayotundesalam16@gmail.com
-2024-09-08T21:07:32.463+01:00  INFO 11227 --- [service] [http-nio-323-exec-3] c.t.s.w.Balance.context.BalanceContext   : SINK(NOTIFICATION): Sink added
-2024-09-08T21:12:16.065+01:00  INFO 11227 --- [service] [http-nio-323-exec-7] c.t.s.w.Balance.context.BalanceContext   : SINK(NOTIFICATION): Sink removed
-2024-09-08T21:12:16.082+01:00  INFO 11227 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:12:20.543+01:00  INFO 11334 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 11334 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
-2024-09-08T21:12:20.547+01:00  INFO 11334 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T21:12:21.259+01:00  INFO 11334 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:12:21.260+01:00  INFO 11334 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T21:12:21.461+01:00  INFO 11334 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 191 ms. Found 3 JPA repository interfaces.
-2024-09-08T21:12:21.463+01:00  INFO 11334 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:12:21.464+01:00  INFO 11334 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T21:12:21.478+01:00  INFO 11334 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 3 R2DBC repository interfaces.
-2024-09-08T21:12:22.429+01:00  INFO 11334 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T21:12:22.445+01:00  INFO 11334 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T21:12:22.446+01:00  INFO 11334 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T21:12:22.523+01:00  INFO 11334 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T21:12:22.524+01:00  INFO 11334 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1891 ms
-2024-09-08T21:12:22.739+01:00  INFO 11334 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T21:12:22.744+01:00  INFO 11334 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:12:22.815+01:00  INFO 11334 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T21:12:22.875+01:00  INFO 11334 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T21:12:22.928+01:00  INFO 11334 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T21:12:23.271+01:00  INFO 11334 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T21:12:23.681+01:00  WARN 11334 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T21:12:24.591+01:00  INFO 11334 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T21:12:24.667+01:00  INFO 11334 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:12:24.936+01:00  INFO 11334 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T21:12:24.936+01:00  INFO 11334 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T21:12:25.787+01:00  INFO 11334 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15f3f9cf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b8d1537, org.springframework.security.web.context.SecurityContextHolderFilter@c9234a0, org.springframework.security.web.header.HeaderWriterFilter@38320819, org.springframework.security.web.authentication.logout.LogoutFilter@5fe19d0e, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@7d528cf7, com.tappay.service.security.MySecurityFilter.TokenFilter@4cd079fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b91e024, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a9004e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@497cf31a, org.springframework.security.web.session.SessionManagementFilter@194a653d, org.springframework.security.web.access.ExceptionTranslationFilter@7b6c3b37, org.springframework.security.web.access.intercept.AuthorizationFilter@67e12e28]
-2024-09-08T21:12:25.789+01:00  INFO 11334 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:12:26.116+01:00  INFO 11334 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T21:12:26.127+01:00  INFO 11334 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 6.377 seconds (process running for 7.439)
-2024-09-08T21:12:33.636+01:00  INFO 11334 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-08T21:12:33.636+01:00  INFO 11334 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-08T21:12:33.640+01:00  INFO 11334 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-09-08T21:15:17.167+01:00  INFO 11334 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:15:20.732+01:00  INFO 11379 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 11379 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
-2024-09-08T21:15:20.735+01:00  INFO 11379 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T21:15:21.642+01:00  INFO 11379 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:15:21.642+01:00  INFO 11379 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T21:15:21.855+01:00  INFO 11379 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 203 ms. Found 3 JPA repository interfaces.
-2024-09-08T21:15:21.857+01:00  INFO 11379 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:15:21.857+01:00  INFO 11379 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T21:15:21.871+01:00  INFO 11379 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 3 R2DBC repository interfaces.
-2024-09-08T21:15:23.284+01:00  INFO 11379 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T21:15:23.301+01:00  INFO 11379 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T21:15:23.302+01:00  INFO 11379 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T21:15:23.384+01:00  INFO 11379 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T21:15:23.385+01:00  INFO 11379 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2543 ms
-2024-09-08T21:15:23.581+01:00  INFO 11379 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T21:15:23.585+01:00  INFO 11379 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:15:23.649+01:00  INFO 11379 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T21:15:23.726+01:00  INFO 11379 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T21:15:23.770+01:00  INFO 11379 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T21:15:24.122+01:00  INFO 11379 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T21:15:24.538+01:00  WARN 11379 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T21:15:25.498+01:00  INFO 11379 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T21:15:25.580+01:00  INFO 11379 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:15:25.882+01:00  INFO 11379 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T21:15:25.882+01:00  INFO 11379 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T21:15:26.792+01:00  INFO 11379 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@65c634f2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57f9f387, org.springframework.security.web.context.SecurityContextHolderFilter@16c3388e, org.springframework.security.web.header.HeaderWriterFilter@739500b8, org.springframework.security.web.authentication.logout.LogoutFilter@46374b8, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@7f323b3a, com.tappay.service.security.MySecurityFilter.TokenFilter@2530baf6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d82ded2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32192a69, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b4376e1, org.springframework.security.web.session.SessionManagementFilter@7b6c3b37, org.springframework.security.web.access.ExceptionTranslationFilter@454f6cc5, org.springframework.security.web.access.intercept.AuthorizationFilter@7a791e8b]
-2024-09-08T21:15:26.793+01:00  INFO 11379 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:15:27.184+01:00  INFO 11379 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T21:15:27.195+01:00  INFO 11379 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 7.119 seconds (process running for 7.696)
-2024-09-08T21:15:30.269+01:00  INFO 11379 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-08T21:15:30.270+01:00  INFO 11379 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-08T21:15:30.272+01:00  INFO 11379 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-09-08T21:15:30.899+01:00  INFO 11379 --- [service] [http-nio-323-exec-2] c.t.s.w.Transaction.service.TxService    : Getting transactions
-2024-09-08T21:15:30.900+01:00 ERROR 11379 --- [service] [http-nio-323-exec-2] c.t.s.w.Transaction.service.TxService    : Error getting transactions: Cannot invoke "com.tappay.service.reactiverepository.Transaction.ReactiveTxRepository.findAll()" because "txRepository" is null
-2024-09-08T21:26:48.459+01:00  INFO 11379 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:26:52.545+01:00  INFO 11474 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 11474 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
-2024-09-08T21:26:52.548+01:00  INFO 11474 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T21:26:53.250+01:00  INFO 11474 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:26:53.250+01:00  INFO 11474 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T21:26:53.462+01:00  INFO 11474 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 202 ms. Found 3 JPA repository interfaces.
-2024-09-08T21:26:53.464+01:00  INFO 11474 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:26:53.465+01:00  INFO 11474 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T21:26:53.477+01:00  INFO 11474 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 3 R2DBC repository interfaces.
-2024-09-08T21:26:54.441+01:00  INFO 11474 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T21:26:54.459+01:00  INFO 11474 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T21:26:54.460+01:00  INFO 11474 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T21:26:54.538+01:00  INFO 11474 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T21:26:54.539+01:00  INFO 11474 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1910 ms
-2024-09-08T21:26:54.754+01:00  INFO 11474 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T21:26:54.758+01:00  INFO 11474 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:26:54.820+01:00  INFO 11474 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T21:26:54.897+01:00  INFO 11474 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T21:26:54.942+01:00  INFO 11474 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T21:26:55.288+01:00  INFO 11474 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T21:26:55.698+01:00  WARN 11474 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T21:26:56.682+01:00  INFO 11474 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T21:26:56.780+01:00  INFO 11474 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:26:57.037+01:00  INFO 11474 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T21:26:57.037+01:00  INFO 11474 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T21:26:57.580+01:00  WARN 11474 --- [service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'txManager': Unsatisfied dependency expressed through field 'service': No qualifying bean of type 'com.tappay.service.webservice.Transaction.service.TxService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2024-09-08T21:26:57.581+01:00  INFO 11474 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:26:57.603+01:00  INFO 11474 --- [service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-09-08T21:26:57.606+01:00  WARN 11474 --- [service] [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [parallel-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.base@17.0.9/jdk.internal.misc.Unsafe.park(Native Method)
- java.base@17.0.9/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
- java.base@17.0.9/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
- java.base@17.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
- java.base@17.0.9/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
- java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
- java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
- java.base@17.0.9/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
- java.base@17.0.9/java.lang.Thread.run(Thread.java:842)
-2024-09-08T21:26:57.617+01:00  INFO 11474 --- [service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-10T01:49:33.714+01:00  INFO 3879 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:49:38.854+01:00  INFO 3932 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 3932 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
+2024-09-10T01:49:38.857+01:00  INFO 3932 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-09-10T01:49:39.652+01:00  INFO 3932 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:49:39.653+01:00  INFO 3932 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-10T01:49:39.885+01:00  INFO 3932 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 221 ms. Found 4 JPA repository interfaces.
+2024-09-10T01:49:39.887+01:00  INFO 3932 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:49:39.887+01:00  INFO 3932 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-09-10T01:49:39.902+01:00  INFO 3932 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 R2DBC repository interfaces.
+2024-09-10T01:49:41.013+01:00  INFO 3932 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
+2024-09-10T01:49:41.030+01:00  INFO 3932 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-10T01:49:41.030+01:00  INFO 3932 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-10T01:49:41.113+01:00  INFO 3932 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-10T01:49:41.114+01:00  INFO 3932 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2175 ms
+2024-09-10T01:49:41.341+01:00  INFO 3932 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
+2024-09-10T01:49:41.346+01:00  INFO 3932 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:49:41.418+01:00  INFO 3932 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-10T01:49:41.492+01:00  INFO 3932 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-09-10T01:49:41.539+01:00  INFO 3932 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-10T01:49:41.938+01:00  INFO 3932 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-10T01:49:42.389+01:00  WARN 3932 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-10T01:49:43.497+01:00  INFO 3932 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-10T01:49:43.589+01:00  INFO 3932 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:49:43.963+01:00  INFO 3932 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2024-09-10T01:49:43.964+01:00  INFO 3932 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-10T01:49:45.090+01:00  INFO 3932 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@68c05c5b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b5e6983, org.springframework.security.web.context.SecurityContextHolderFilter@5a9a187b, org.springframework.security.web.header.HeaderWriterFilter@39aaa7db, org.springframework.security.web.authentication.logout.LogoutFilter@1d642682, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@750a04ec, com.tappay.service.security.MySecurityFilter.TokenFilter@aaf4375, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5eaa6f76, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59cbeaee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@130a99fe, org.springframework.security.web.session.SessionManagementFilter@44a972b4, org.springframework.security.web.access.ExceptionTranslationFilter@9214725, org.springframework.security.web.access.intercept.AuthorizationFilter@5c85ed05]
+2024-09-10T01:49:45.091+01:00  INFO 3932 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:49:45.434+01:00  INFO 3932 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
+2024-09-10T01:49:45.444+01:00  INFO 3932 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 7.278 seconds (process running for 7.878)
+2024-09-10T01:49:49.774+01:00  INFO 3932 --- [service] [http-nio-323-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-10T01:49:49.774+01:00  INFO 3932 --- [service] [http-nio-323-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-10T01:49:49.775+01:00  INFO 3932 --- [service] [http-nio-323-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-10T01:49:50.450+01:00  INFO 3932 --- [service] [http-nio-323-exec-1] c.t.s.w.KYC.Controller.KycController     : Uploading document
+2024-09-10T01:49:50.455+01:00  INFO 3932 --- [service] [http-nio-323-exec-1] c.t.s.w.KYC.Services.KycService          : File extension: Screenshot 2024-09-09 at 1
+2024-09-10T01:49:59.414+01:00  INFO 3932 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:50:04.509+01:00  INFO 3946 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 3946 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
+2024-09-10T01:50:04.513+01:00  INFO 3946 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-09-10T01:50:05.295+01:00  INFO 3946 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:50:05.296+01:00  INFO 3946 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-10T01:50:05.477+01:00  INFO 3946 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171 ms. Found 4 JPA repository interfaces.
+2024-09-10T01:50:05.479+01:00  INFO 3946 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:50:05.479+01:00  INFO 3946 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-09-10T01:50:05.491+01:00  INFO 3946 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 3 R2DBC repository interfaces.
+2024-09-10T01:50:06.579+01:00  INFO 3946 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
+2024-09-10T01:50:06.598+01:00  INFO 3946 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-10T01:50:06.600+01:00  INFO 3946 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-10T01:50:06.717+01:00  INFO 3946 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-10T01:50:06.718+01:00  INFO 3946 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2112 ms
+2024-09-10T01:50:06.911+01:00  INFO 3946 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
+2024-09-10T01:50:06.915+01:00  INFO 3946 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:50:07.011+01:00  INFO 3946 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-10T01:50:07.183+01:00  INFO 3946 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-09-10T01:50:07.267+01:00  INFO 3946 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-10T01:50:07.642+01:00  INFO 3946 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-10T01:50:08.092+01:00  WARN 3946 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-10T01:50:09.046+01:00  INFO 3946 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-10T01:50:09.160+01:00  INFO 3946 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:50:09.418+01:00  INFO 3946 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2024-09-10T01:50:09.418+01:00  INFO 3946 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-10T01:50:10.468+01:00  INFO 3946 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@74474fc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cd239f6, org.springframework.security.web.context.SecurityContextHolderFilter@2297c8bf, org.springframework.security.web.header.HeaderWriterFilter@678c0310, org.springframework.security.web.authentication.logout.LogoutFilter@fee1e32, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@45b32dfe, com.tappay.service.security.MySecurityFilter.TokenFilter@18d63996, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34a06981, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55b7f0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ba7391b, org.springframework.security.web.session.SessionManagementFilter@3fc105dd, org.springframework.security.web.access.ExceptionTranslationFilter@3fe1b278, org.springframework.security.web.access.intercept.AuthorizationFilter@31773d5b]
+2024-09-10T01:50:10.469+01:00  INFO 3946 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:50:10.814+01:00  INFO 3946 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
+2024-09-10T01:50:10.826+01:00  INFO 3946 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 7.103 seconds (process running for 7.717)
+2024-09-10T01:50:13.822+01:00  INFO 3946 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-10T01:50:13.822+01:00  INFO 3946 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-10T01:50:13.824+01:00  INFO 3946 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-10T01:50:14.433+01:00  INFO 3946 --- [service] [http-nio-323-exec-2] c.t.s.w.KYC.Controller.KycController     : Uploading document
+2024-09-10T01:50:14.436+01:00  INFO 3946 --- [service] [http-nio-323-exec-2] c.t.s.w.KYC.Services.KycService          : File extension: 00
+2024-09-10T01:54:38.161+01:00  INFO 3946 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:54:43.172+01:00  INFO 4013 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 4013 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
+2024-09-10T01:54:43.176+01:00  INFO 4013 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-09-10T01:54:43.871+01:00  INFO 4013 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:54:43.872+01:00  INFO 4013 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-10T01:54:44.085+01:00  INFO 4013 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 203 ms. Found 4 JPA repository interfaces.
+2024-09-10T01:54:44.087+01:00  INFO 4013 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:54:44.088+01:00  INFO 4013 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-09-10T01:54:44.103+01:00  INFO 4013 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 R2DBC repository interfaces.
+2024-09-10T01:54:45.063+01:00  INFO 4013 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
+2024-09-10T01:54:45.082+01:00  INFO 4013 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-10T01:54:45.083+01:00  INFO 4013 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-10T01:54:45.161+01:00  INFO 4013 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-10T01:54:45.161+01:00  INFO 4013 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1902 ms
+2024-09-10T01:54:45.369+01:00  INFO 4013 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
+2024-09-10T01:54:45.373+01:00  INFO 4013 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:54:45.432+01:00  INFO 4013 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-10T01:54:45.491+01:00  INFO 4013 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-09-10T01:54:45.543+01:00  INFO 4013 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-10T01:54:45.904+01:00  INFO 4013 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-10T01:54:46.326+01:00  WARN 4013 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-10T01:54:47.315+01:00  INFO 4013 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-10T01:54:47.395+01:00  INFO 4013 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:54:47.654+01:00  INFO 4013 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2024-09-10T01:54:47.655+01:00  INFO 4013 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-10T01:54:48.548+01:00  INFO 4013 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@74474fc0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cd239f6, org.springframework.security.web.context.SecurityContextHolderFilter@2297c8bf, org.springframework.security.web.header.HeaderWriterFilter@678c0310, org.springframework.security.web.authentication.logout.LogoutFilter@fee1e32, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@45b32dfe, com.tappay.service.security.MySecurityFilter.TokenFilter@18d63996, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34a06981, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55b7f0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ba7391b, org.springframework.security.web.session.SessionManagementFilter@3fc105dd, org.springframework.security.web.access.ExceptionTranslationFilter@3fe1b278, org.springframework.security.web.access.intercept.AuthorizationFilter@31773d5b]
+2024-09-10T01:54:48.549+01:00  INFO 4013 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:54:48.875+01:00  INFO 4013 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
+2024-09-10T01:54:48.886+01:00  INFO 4013 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 6.378 seconds (process running for 6.91)
+2024-09-10T01:54:52.502+01:00  INFO 4013 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-10T01:54:52.502+01:00  INFO 4013 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-10T01:54:52.504+01:00  INFO 4013 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-09-10T01:54:53.091+01:00  INFO 4013 --- [service] [http-nio-323-exec-2] c.t.s.w.KYC.Controller.KycController     : Uploading document
+2024-09-10T01:54:53.094+01:00  INFO 4013 --- [service] [http-nio-323-exec-2] c.t.s.w.KYC.Services.KycService          : File extension: png
+2024-09-10T01:55:01.111+01:00  INFO 4013 --- [service] [http-nio-323-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
 
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-09-08T21:26:57.646+01:00 ERROR 11474 --- [service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030xf2I0xc40xea0xc40xc40x83@0x8f0xaaN0xecF0xec0x870xaf0x900x04c0x880xc50x870x0dQ0xd1p0xccL0x8aS0xcff ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:257) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 
-***************************
-APPLICATION FAILED TO START
-***************************
+2024-09-10T01:55:18.592+01:00  WARN 4013 --- [service] [http-nio-323-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-09-10T01:56:31.536+01:00  INFO 4013 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:56:35.351+01:00  INFO 4039 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 4039 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
+2024-09-10T01:56:35.355+01:00  INFO 4039 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-09-10T01:56:36.065+01:00  INFO 4039 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:56:36.066+01:00  INFO 4039 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-10T01:56:36.284+01:00  INFO 4039 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207 ms. Found 4 JPA repository interfaces.
+2024-09-10T01:56:36.286+01:00  INFO 4039 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T01:56:36.287+01:00  INFO 4039 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-09-10T01:56:36.302+01:00  INFO 4039 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 R2DBC repository interfaces.
+2024-09-10T01:56:37.240+01:00  INFO 4039 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
+2024-09-10T01:56:37.255+01:00  INFO 4039 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-10T01:56:37.256+01:00  INFO 4039 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-10T01:56:37.352+01:00  INFO 4039 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-10T01:56:37.353+01:00  INFO 4039 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1917 ms
+2024-09-10T01:56:37.583+01:00  INFO 4039 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
+2024-09-10T01:56:37.586+01:00  INFO 4039 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:56:37.646+01:00  INFO 4039 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-10T01:56:37.722+01:00  INFO 4039 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-09-10T01:56:37.773+01:00  INFO 4039 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-10T01:56:38.170+01:00  INFO 4039 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-10T01:56:38.668+01:00  WARN 4039 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-10T01:56:39.743+01:00  INFO 4039 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-10T01:56:39.822+01:00  INFO 4039 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:56:40.085+01:00  INFO 4039 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2024-09-10T01:56:40.086+01:00  INFO 4039 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-10T01:56:41.036+01:00  INFO 4039 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6153aca1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30b2d267, org.springframework.security.web.context.SecurityContextHolderFilter@75e068dc, org.springframework.security.web.header.HeaderWriterFilter@5529fd4e, org.springframework.security.web.authentication.logout.LogoutFilter@475753dd, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@54336976, com.tappay.service.security.MySecurityFilter.TokenFilter@4f3b11e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@268eefe7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61d7df22, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a740449, org.springframework.security.web.session.SessionManagementFilter@53ccbc15, org.springframework.security.web.access.ExceptionTranslationFilter@7712c315, org.springframework.security.web.access.intercept.AuthorizationFilter@5c21b22e]
+2024-09-10T01:56:41.036+01:00  INFO 4039 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T01:56:41.398+01:00  INFO 4039 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
+2024-09-10T01:56:41.409+01:00  INFO 4039 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 6.689 seconds (process running for 7.25)
+2024-09-10T01:56:47.475+01:00  INFO 4039 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-10T01:56:47.476+01:00  INFO 4039 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-10T01:56:47.477+01:00  INFO 4039 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-10T01:58:26.952+01:00  INFO 4039 --- [service] [http-nio-323-exec-5] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
 
-Description:
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030xea2Z0x840xb00xb8d0xc00xfd10x880xbfqr0x830xfe0xa40x0ex!LH0xc50xd90xed\0xd7j0xab0x85s0x91 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:257) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.28.jar:10.1.28]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
 
-Field service in com.tappay.service.webservice.Transaction.TxManager required a bean of type 'com.tappay.service.webservice.Transaction.service.TxService' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'com.tappay.service.webservice.Transaction.service.TxService' in your configuration.
-
-2024-09-08T21:27:32.879+01:00  INFO 11490 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 11490 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
-2024-09-08T21:27:32.882+01:00  INFO 11490 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T21:27:33.544+01:00  INFO 11490 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:27:33.545+01:00  INFO 11490 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T21:27:33.707+01:00  INFO 11490 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152 ms. Found 3 JPA repository interfaces.
-2024-09-08T21:27:33.708+01:00  INFO 11490 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:27:33.709+01:00  INFO 11490 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T21:27:33.719+01:00  INFO 11490 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 3 R2DBC repository interfaces.
-2024-09-08T21:27:34.630+01:00  INFO 11490 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T21:27:34.644+01:00  INFO 11490 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T21:27:34.644+01:00  INFO 11490 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T21:27:34.714+01:00  INFO 11490 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T21:27:34.715+01:00  INFO 11490 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1753 ms
-2024-09-08T21:27:34.895+01:00  INFO 11490 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T21:27:34.899+01:00  INFO 11490 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:27:34.955+01:00  INFO 11490 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T21:27:35.010+01:00  INFO 11490 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T21:27:35.056+01:00  INFO 11490 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T21:27:35.380+01:00  INFO 11490 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T21:27:35.781+01:00  WARN 11490 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T21:27:36.640+01:00  INFO 11490 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T21:27:36.714+01:00  INFO 11490 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:27:36.969+01:00  INFO 11490 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T21:27:36.970+01:00  INFO 11490 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T21:27:37.760+01:00  INFO 11490 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78a46d7b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2726b2f3, org.springframework.security.web.context.SecurityContextHolderFilter@17af9f67, org.springframework.security.web.header.HeaderWriterFilter@32192a69, org.springframework.security.web.authentication.logout.LogoutFilter@96271d8, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@6dee8ae6, com.tappay.service.security.MySecurityFilter.TokenFilter@37823482, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@484b187c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29ceefb3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3509f32d, org.springframework.security.web.session.SessionManagementFilter@7c9015c6, org.springframework.security.web.access.ExceptionTranslationFilter@1046aaa4, org.springframework.security.web.access.intercept.AuthorizationFilter@53f18591]
-2024-09-08T21:27:37.761+01:00  INFO 11490 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:27:38.087+01:00  INFO 11490 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T21:27:38.099+01:00  INFO 11490 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 5.821 seconds (process running for 6.317)
-2024-09-08T21:27:45.924+01:00  INFO 11490 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-08T21:27:45.925+01:00  INFO 11490 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-08T21:27:45.926+01:00  INFO 11490 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-09-08T21:27:46.528+01:00  INFO 11490 --- [service] [http-nio-323-exec-2] c.t.s.w.Transaction.service.TxService    : Getting transactions
-2024-09-08T21:27:46.594+01:00  WARN 11490 --- [service] [http-nio-323-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class org.springframework.http.ResponseEntity$DefaultBuilder] with preset Content-Type 'null']
-2024-09-08T21:32:43.967+01:00  INFO 11490 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:32:47.819+01:00  INFO 11562 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 11562 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
-2024-09-08T21:32:47.821+01:00  INFO 11562 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T21:32:48.500+01:00  INFO 11562 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:32:48.501+01:00  INFO 11562 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T21:32:48.696+01:00  INFO 11562 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 184 ms. Found 3 JPA repository interfaces.
-2024-09-08T21:32:48.697+01:00  INFO 11562 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T21:32:48.698+01:00  INFO 11562 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T21:32:48.711+01:00  INFO 11562 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 3 R2DBC repository interfaces.
-2024-09-08T21:32:49.652+01:00  INFO 11562 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T21:32:49.669+01:00  INFO 11562 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T21:32:49.669+01:00  INFO 11562 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T21:32:49.743+01:00  INFO 11562 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T21:32:49.744+01:00  INFO 11562 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1844 ms
-2024-09-08T21:32:49.935+01:00  INFO 11562 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T21:32:49.939+01:00  INFO 11562 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:32:50.003+01:00  INFO 11562 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T21:32:50.067+01:00  INFO 11562 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T21:32:50.113+01:00  INFO 11562 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T21:32:50.458+01:00  INFO 11562 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T21:32:50.872+01:00  WARN 11562 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T21:32:51.817+01:00  INFO 11562 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T21:32:51.897+01:00  INFO 11562 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T21:32:52.177+01:00  INFO 11562 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T21:32:52.178+01:00  INFO 11562 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T21:32:53.042+01:00  INFO 11562 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@768967cf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@116fe252, org.springframework.security.web.context.SecurityContextHolderFilter@65c634f2, org.springframework.security.web.header.HeaderWriterFilter@6b6d8671, org.springframework.security.web.authentication.logout.LogoutFilter@6f4e39b3, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@17229821, com.tappay.service.security.MySecurityFilter.TokenFilter@620e0d36, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b4376e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@704ddfad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b8b755d, org.springframework.security.web.session.SessionManagementFilter@7a791e8b, org.springframework.security.web.access.ExceptionTranslationFilter@5a9004e1, org.springframework.security.web.access.intercept.AuthorizationFilter@5e572ad6]
-2024-09-08T21:32:53.043+01:00  INFO 11562 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T21:32:53.371+01:00  INFO 11562 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T21:32:53.382+01:00  INFO 11562 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 6.194 seconds (process running for 6.832)
-2024-09-08T21:33:00.429+01:00  INFO 11562 --- [service] [http-nio-323-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-08T21:33:00.430+01:00  INFO 11562 --- [service] [http-nio-323-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-08T21:33:00.433+01:00  INFO 11562 --- [service] [http-nio-323-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2024-09-08T21:33:01.153+01:00  INFO 11562 --- [service] [http-nio-323-exec-1] c.t.s.w.Transaction.service.TxService    : Getting transactions
-2024-09-08T21:33:01.210+01:00  INFO 11562 --- [service] [http-nio-323-exec-1] c.t.s.w.Transaction.context.TxContext    : SINK(NOTIFICATION): Sink added
-2024-09-08T21:33:11.701+01:00  INFO 11562 --- [service] [http-nio-323-exec-3] c.t.s.w.Transaction.context.TxContext    : SINK(NOTIFICATION): Sink removed
-2024-09-08T21:33:11.719+01:00  INFO 11562 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T23:16:06.625+01:00  INFO 15904 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 15904 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
-2024-09-08T23:16:06.627+01:00  INFO 15904 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T23:16:07.167+01:00  INFO 15904 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T23:16:07.167+01:00  INFO 15904 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-08T23:16:07.330+01:00  INFO 15904 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 155 ms. Found 3 JPA repository interfaces.
-2024-09-08T23:16:07.332+01:00  INFO 15904 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-09-08T23:16:07.332+01:00  INFO 15904 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
-2024-09-08T23:16:07.339+01:00  INFO 15904 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 3 R2DBC repository interfaces.
-2024-09-08T23:16:08.027+01:00  INFO 15904 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
-2024-09-08T23:16:08.039+01:00  INFO 15904 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-09-08T23:16:08.039+01:00  INFO 15904 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-09-08T23:16:08.091+01:00  INFO 15904 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-09-08T23:16:08.092+01:00  INFO 15904 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1419 ms
-2024-09-08T23:16:08.231+01:00  INFO 15904 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
-2024-09-08T23:16:08.236+01:00  INFO 15904 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T23:16:08.289+01:00  INFO 15904 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-08T23:16:08.356+01:00  INFO 15904 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
-2024-09-08T23:16:08.390+01:00  INFO 15904 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-08T23:16:08.673+01:00  INFO 15904 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-08T23:16:09.066+01:00  WARN 15904 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-09-08T23:16:09.766+01:00  INFO 15904 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-08T23:16:09.819+01:00  INFO 15904 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-08T23:16:10.003+01:00  INFO 15904 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
-2024-09-08T23:16:10.003+01:00  INFO 15904 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-09-08T23:16:10.622+01:00  INFO 15904 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28d74041, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5702232d, org.springframework.security.web.context.SecurityContextHolderFilter@709353b9, org.springframework.security.web.header.HeaderWriterFilter@2bb03136, org.springframework.security.web.authentication.logout.LogoutFilter@13ac1657, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@4f2d014a, com.tappay.service.security.MySecurityFilter.TokenFilter@1a1dd8eb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@768967cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2052c49f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cbf9aee, org.springframework.security.web.session.SessionManagementFilter@1c00a9f0, org.springframework.security.web.access.ExceptionTranslationFilter@53f18591, org.springframework.security.web.access.intercept.AuthorizationFilter@274b0c2a]
-2024-09-08T23:16:10.622+01:00  INFO 15904 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
-2024-09-08T23:16:10.838+01:00  INFO 15904 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
-2024-09-08T23:16:10.845+01:00  INFO 15904 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 4.658 seconds (process running for 5.119)
-2024-09-08T23:17:04.659+01:00  INFO 15904 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-09-08T23:17:04.660+01:00  INFO 15904 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-09-08T23:17:04.664+01:00  INFO 15904 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2024-09-08T23:17:05.150+01:00  INFO 15904 --- [service] [http-nio-323-exec-2] c.t.s.w.Profile.service.ProfileService   : Getting profile for user: 784517052
-2024-09-08T23:17:26.565+01:00  INFO 15904 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T01:59:14.939+01:00  INFO 4039 --- [service] [http-nio-323-exec-8] c.t.s.w.KYC.Controller.KycController     : Submitting kyc:user:784517052
+2024-09-10T02:08:05.667+01:00  INFO 4039 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T02:08:10.246+01:00  INFO 4206 --- [service] [main] com.tappay.service.ServiceApplication    : Starting ServiceApplication using Java 17.0.9 with PID 4206 (/Users/mac/Documents/tappay/target/classes started by mac in /Users/mac/Documents/tappay)
+2024-09-10T02:08:10.250+01:00  INFO 4206 --- [service] [main] com.tappay.service.ServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-09-10T02:08:10.992+01:00  INFO 4206 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T02:08:10.992+01:00  INFO 4206 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-10T02:08:11.216+01:00  INFO 4206 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 214 ms. Found 4 JPA repository interfaces.
+2024-09-10T02:08:11.220+01:00  INFO 4206 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-09-10T02:08:11.221+01:00  INFO 4206 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2024-09-10T02:08:11.236+01:00  INFO 4206 --- [service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 3 R2DBC repository interfaces.
+2024-09-10T02:08:12.240+01:00  INFO 4206 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 323 (http)
+2024-09-10T02:08:12.256+01:00  INFO 4206 --- [service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-10T02:08:12.257+01:00  INFO 4206 --- [service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-10T02:08:12.347+01:00  INFO 4206 --- [service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-10T02:08:12.348+01:00  INFO 4206 --- [service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2024 ms
+2024-09-10T02:08:12.585+01:00  INFO 4206 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up Local container entity manager
+2024-09-10T02:08:12.589+01:00  INFO 4206 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T02:08:12.651+01:00  INFO 4206 --- [service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-10T02:08:12.717+01:00  INFO 4206 --- [service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-09-10T02:08:12.777+01:00  INFO 4206 --- [service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-10T02:08:13.196+01:00  INFO 4206 --- [service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-10T02:08:13.620+01:00  WARN 4206 --- [service] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-09-10T02:08:14.681+01:00  INFO 4206 --- [service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-10T02:08:14.768+01:00  INFO 4206 --- [service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-10T02:08:15.036+01:00  INFO 4206 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : JSqlParser is in classpath; If applicable, JSqlParser will be used
+2024-09-10T02:08:15.036+01:00  INFO 4206 --- [service] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-09-10T02:08:15.952+01:00  INFO 4206 --- [service] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@184e5c44, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6527aa0, org.springframework.security.web.context.SecurityContextHolderFilter@5817b0d1, org.springframework.security.web.header.HeaderWriterFilter@7712c315, org.springframework.security.web.authentication.logout.LogoutFilter@7cd239f6, com.tappay.service.security.MySecurityFilter.RequestThrottleFilter@7bdf61ad, com.tappay.service.security.MySecurityFilter.TokenFilter@306c8e09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75e068dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3181fbe7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6153aca1, org.springframework.security.web.session.SessionManagementFilter@55b7f0d, org.springframework.security.web.access.ExceptionTranslationFilter@44a972b4, org.springframework.security.web.access.intercept.AuthorizationFilter@7dbc77ca]
+2024-09-10T02:08:15.953+01:00  INFO 4206 --- [service] [main] c.t.service.MyDataSource.MyDataSource    : Setting up data source
+2024-09-10T02:08:16.304+01:00  INFO 4206 --- [service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 323 (http) with context path ''
+2024-09-10T02:08:16.315+01:00  INFO 4206 --- [service] [main] com.tappay.service.ServiceApplication    : Started ServiceApplication in 6.685 seconds (process running for 7.305)
+2024-09-10T02:08:24.525+01:00  INFO 4206 --- [service] [http-nio-323-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-10T02:08:24.526+01:00  INFO 4206 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-10T02:08:24.527+01:00  INFO 4206 --- [service] [http-nio-323-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-09-10T02:08:25.119+01:00  WARN 4206 --- [service] [http-nio-323-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-09-10T02:08:32.513+01:00  INFO 4206 --- [service] [http-nio-323-exec-3] c.t.s.w.KYC.Controller.KycController     : Submitting kyc:user:784517052
+2024-09-10T02:14:42.792+01:00  INFO 4206 --- [service] [http-nio-323-exec-6] c.t.s.w.KYC.Controller.KycController     : Submitting kyc:user:784517052
+2024-09-10T02:15:58.278+01:00  INFO 4206 --- [service] [http-nio-323-exec-8] c.t.s.w.KYC.Controller.KycController     : Getting kyc:user:784517052
+2024-09-10T02:17:13.266+01:00  INFO 4206 --- [service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

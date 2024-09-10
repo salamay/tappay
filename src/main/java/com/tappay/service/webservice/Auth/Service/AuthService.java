@@ -151,6 +151,7 @@ public class AuthService {
             profilemodel.setEmail(registrationModel.getEmail());
             profilemodel.setDate_joined(new Date(System.currentTimeMillis()));
             profilemodel.setAccount_status(ACCOUNT_ACTIVE);
+            profilemodel.setIs_email_verified(true);
             profilemodel.setUser_uid(uid);
             logger.info("Creating Balance");
             UserBalance userBalance=new UserBalance();

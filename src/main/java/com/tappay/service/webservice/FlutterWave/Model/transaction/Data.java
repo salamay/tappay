@@ -134,6 +134,7 @@ public class Data{
 	}
 
 
+
 	public String getStatus(){
 		return status;
 	}

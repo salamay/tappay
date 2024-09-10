@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Constants {
+    public static final String baseUrl="http://localhost:323";
 
     public static Map<String,String> currencyMap=new HashMap<>(){{
         put("US","USD");
@@ -14,4 +15,7 @@ public class Constants {
     public static String TX_CHARGE="Charge";
     public static String COMPLETED="Completed";
     public static String ACCOUNT="account";
+    public enum KycStatus{
+        Pending,Verified,Failed
+    }
 }
