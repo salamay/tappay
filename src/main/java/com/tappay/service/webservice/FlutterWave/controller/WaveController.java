@@ -86,13 +86,9 @@ public class WaveController {
                                .doOnSuccess(e->{
                                    logger.info("Balance updated: "+tx_ref);
                                    reactiveBalanceRepository.findBalance(u.getUid())
-                                           .doOnSuccess(ss->{
-                                               reactiveBalanceRepository.findBalance(u.getUid()).doOnSuccess(balance -> {
-                                                   balanceContext.sendEvent(balance,u.getUid());
-                                               }).subscribe();
-
-                                           })
-                                           .subscribe();
+                                           .doOnSuccess(balance->{
+                                               balanceContext.sendEvent(balance,u.getUid());
+                                           }).subscribe();
                                }).subscribe();
                        logger.info("Saving transaction log: "+tx_ref);
                        TxLog txLog=new TxLog();
@@ -120,7 +116,9 @@ public class WaveController {
             String fullName=event.getData().getCustomer().getName();
             String dateString=event.getData().getCreatedAt();
             String paymentType=event.getData().getPaymentType();
+            String narration=event.getData().getNarration();
             double amount=event.getData().getChargedAmount();
+            String currency=event.getData().getCurrency();
             Instant instant = Instant.parse(dateString);
             LocalDate localDate = instant.atZone(ZoneId.systemDefault()).toLocalDate();
             Optional<UserModel> user=userRepository.findByEmail(email);
@@ -128,17 +126,18 @@ public class WaveController {
                 UserModel u=user.get();
                 logger.info("Saving transaction: "+tx_ref);
                 UserTransaction userTransaction=new UserTransaction();
-                userTransaction.setId(String.valueOf(id));
                 userTransaction.setUid(u.getUid());
                 userTransaction.setAmount(String.valueOf(amount));
                 userTransaction.setDate(localDate);
                 userTransaction.setType(TX_CHARGE);
                 userTransaction.setTx_ref(tx_ref);
+                userTransaction.setNarration(narration);
                 userTransaction.setSender(fullName);
                 userTransaction.setReceiver(fullName);
                 userTransaction.setUser_uid(u.getUid());
                 userTransaction.setTransaction_status(COMPLETED);
                 userTransaction.setTransfer_fee("0.00");
+                userTransaction.setCurrency(currency);
                 if(paymentType.equals(CARD)){
                     userTransaction.setPayment_method(CARD);
                 }else if(paymentType.equals(ACCOUNT)){

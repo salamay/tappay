@@ -5,6 +5,7 @@ import com.tappay.service.security.Exception.MyException;
 import com.tappay.service.webservice.FlutterWave.controller.WaveController;
 import com.tappay.service.webservice.Transaction.TxManager;
 import com.tappay.service.webservice.Transaction.context.TxContext;
+import com.tappay.service.webservice.Transaction.model.Cash;
 import com.tappay.service.webservice.Transaction.model.UserTransaction;
 import com.tappay.service.webservice.Transaction.service.TxService;
 import com.tappay.service.webservice.User.model.UserModel;
@@ -14,10 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
 @RestController
@@ -44,6 +42,18 @@ public class TransactionController {
             }).doOnCancel(()->
                     txContext.removeSink(user.getUid())
             );
+        }else{
+            throw new MyException("Invalid user");
+        }
+    }
+
+
+    @RequestMapping(value = "/sendCash",method = RequestMethod.POST)
+    public ResponseEntity<?> sendCash(@RequestAttribute UserModel user, @RequestBody Cash cash) throws IllegalAccessException, MyException {
+        if(!NullFieldChecker.containsNullField(user)){
+            TxService txService= txManager.getService();
+            UserTransaction tx=txService.sendTransaction(user,cash);
+            return ResponseEntity.ok(tx);
         }else{
             throw new MyException("Invalid user");
         }

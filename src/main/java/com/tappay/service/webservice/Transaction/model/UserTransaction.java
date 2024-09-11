@@ -4,6 +4,7 @@ package com.tappay.service.webservice.Transaction.model;
 import jakarta.persistence.Id;
 import org.springframework.data.relational.core.mapping.Table;
 import java.time.LocalDate;
+import java.util.UUID;
 
 
 @Table("transactions")
@@ -15,8 +16,10 @@ public class UserTransaction {
     private String sender;
     private String receiver;
     private String amount;
+    private String currency;
     private LocalDate date;
     private String payment_method;
+    private String narration;
     private String transfer_fee;
     private String bank_name;
     private int account_number;
@@ -26,6 +29,7 @@ public class UserTransaction {
     private int user_uid;
 
     public UserTransaction() {
+        id= UUID.randomUUID().toString();
     }
 
     public String getId() {
@@ -76,6 +80,14 @@ public class UserTransaction {
         this.amount = amount;
     }
 
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
     public LocalDate getDate() {
         return date;
     }
@@ -90,6 +102,14 @@ public class UserTransaction {
 
     public void setPayment_method(String payment_method) {
         this.payment_method = payment_method;
+    }
+
+    public String getNarration() {
+        return narration;
+    }
+
+    public void setNarration(String narration) {
+        this.narration = narration;
     }
 
     public String getTransfer_fee() {

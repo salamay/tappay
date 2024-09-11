@@ -14,4 +14,9 @@ public interface ReactiveBalanceRepository extends ReactiveCrudRepository<UserBa
 
     @Query("UPDATE user_balance SET balance=balance + :amount WHERE uid = :uid")
     Mono<UserBalance> updateBalance(int uid,BigDecimal amount);
+
+    @Query("UPDATE user_balance SET balance=balance - :amount WHERE uid = :uid")
+    Mono<UserBalance> deductBalance(int uid,BigDecimal amount);
+
+
 }

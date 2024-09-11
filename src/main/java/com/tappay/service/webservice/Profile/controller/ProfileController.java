@@ -31,7 +31,7 @@ public class ProfileController {
     public ResponseEntity<?> getTransactions(@RequestAttribute UserModel user) throws IllegalAccessException, MyException {
         if(!NullFieldChecker.containsNullField(user)){
             ProfileService profileService= profileManager.getService();
-            ProfileModel profileModel= profileService.getProfile(user);
+            ProfileModel profileModel= profileService.getProfile(user.getUid());
             return ResponseEntity.ok(profileModel);
         }else{
             throw new MyException("Invalid user");

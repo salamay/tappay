@@ -1,12 +1,10 @@
 package com.tappay.service.webservice.Transaction.context;
 
-
-import com.tappay.service.webservice.Balance.Model.UserBalance;
+import com.tappay.service.webservice.Transaction.model.UserTransaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.FluxSink;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,11 +26,12 @@ public class TxContext {
         System.out.println("USERS(TRANSACTION): "+txSink.size());
     }
 
-    public void sendEvent(UserBalance balance, int uid){
+    public void sendEvent(UserTransaction tx, int uid){
         logger.info("SINK(NOTIFICATION): Sending "+uid+" transaction event");
         FluxSink<Object> sink=txSink.get(uid);
         if (sink!=null){
-            sink.next(balance);
+            sink.next(tx);
         }
     }
+
 }

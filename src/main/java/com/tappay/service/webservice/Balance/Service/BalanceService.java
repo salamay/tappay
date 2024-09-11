@@ -26,4 +26,18 @@ public class BalanceService {
             throw new MyException("Error getting balance");
         }
     }
+
+    public boolean checkBalance(int uid, double amount) throws Exception{
+        try{
+            UserBalance userBalance=reactiveBalanceRepository.findBalance(uid).block();
+            if(userBalance!=null){
+                return userBalance.getBalance().doubleValue()>=amount;
+            }else{
+                return false;
+            }
+        }catch (Exception e){
+            logger.error(e.toString());
+            throw new MyException("Error checking balance");
+        }
+    }
 }

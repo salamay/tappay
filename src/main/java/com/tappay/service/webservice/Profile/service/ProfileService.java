@@ -14,18 +14,28 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProfileService {
 
+    Logger logger= LoggerFactory.getLogger(ProfileService.class);
     @Autowired
     private ProfileManager profileManager;
-    Logger logger= LoggerFactory.getLogger(ProfileService.class);
 
-    public ProfileModel getProfile(UserModel user) throws MyException {
-        logger.info("Getting profile for user: "+user.getUid());
+    public ProfileModel getProfile(int uid) throws MyException {
+        logger.info("Getting profile for user: "+uid);
         try {
             ProfileRepository profileRepository=profileManager.getRepository();
-            return profileRepository.findById(String.valueOf(user.getUid())).orElseThrow(()->new MyException("Profile not found"));
+            return profileRepository.findById(String.valueOf(uid)).orElseThrow(()->new MyException("Profile not found"));
         }catch (Exception e){
-            logger.error("Error getting profile for user: "+user.getUid());
+            logger.error("Error getting profile for user: "+uid);
             throw new MyException("Error getting profile");
+        }
+    }
+
+    public boolean ifIsCurrentUser(UserModel user, int uid) throws MyException {
+        logger.info("Checking if user is current user");
+        try {
+            return user.getUid()==uid;
+        }catch (Exception e){
+            logger.error("Error checking if user is current user");
+            throw new MyException("Error checking if user is current user");
         }
     }
 
